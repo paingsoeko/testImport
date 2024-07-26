@@ -239,6 +239,7 @@ class StudentResource extends Resource
                     })->native(false),
                 SelectFilter::make('attendance_year')
                     ->label('တက်ရောက်မည့်နှစ်')
+                    ->multiple()
                     ->options(function () {
                         return Student::query()
                             ->select('attendance_year')
